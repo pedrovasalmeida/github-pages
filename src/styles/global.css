@@ -5,7 +5,8 @@
 }
 
 body {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 1px;
 	background: #222;
 	color: #eee;
 }

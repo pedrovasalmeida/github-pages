@@ -1,6 +1,10 @@
 import './styles/global.css';
 import './styles/home.css';
 
+import GitHubIcon from './assets/github.svg';
+import InstagramIcon from './assets/instagram.svg';
+import LinkedinIcon from './assets/linkedin.svg';
+
 function App() {
 	return (
 		<div className="container">
@@ -17,14 +21,14 @@ function App() {
 						rel="noreferrer noopener"
 						target="_blank"
 					>
-						<img className="icon" src="./assets/linkedin.svg" alt="Linkedin icon" />
+						<img className="icon" src={LinkedinIcon} alt="Linkedin icon" />
 					</a>
 					<a
 						href="https://github.com/pedrovasalmeida"
 						rel="noreferrer noopener"
 						target="_blank"
 					>
-						<img className="icon" src="./assets/github.svg" alt="Github icon" />
+						<img className="icon" src={GitHubIcon} alt="Github icon" />
 					</a>
 					<a
 						className="last"
@@ -32,7 +36,7 @@ function App() {
 						rel="noreferrer noopener"
 						target="_blank"
 					>
-						<img className="icon" src="./assets/instagram.svg" alt="Instagram icon" />
+						<img className="icon" src={InstagramIcon} alt="Instagram icon" />
 					</a>
 				</div>
 			</section>

@@ -56,6 +56,12 @@ a {
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
+	transition: all 500ms ease;
+	filter: saturate(0);
+}
+
+.icon:hover {
+	filter: saturate(1);
 }
 
 .last {
