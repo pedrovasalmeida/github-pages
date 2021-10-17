@@ -87,3 +87,15 @@ export const MainContent = styled.div`
 	width: 100%;
 	height: 100%;
 `;
+
+export const CreatedByMe = styled.span`
+	font-size: .5rem;
+	position: absolute;
+	bottom: 4rem;
+	opacity: .4;
+	text-align: center;
+
+	@media (min-width: 1100px) {
+		bottom: 1rem;
+	}
+`;

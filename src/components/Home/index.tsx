@@ -4,7 +4,7 @@ import LinkedinIcon from '../../assets/linkedin.svg';
 
 import Typewriter from 'typewriter-effect';
 
-import { Container, FloatSocialBar, MainContent } from './styles';
+import { Container, FloatSocialBar, MainContent, CreatedByMe } from './styles';
 
 export function Home() {
 	function redirectClickTo(url: string) {
@@ -40,6 +40,10 @@ export function Home() {
 						loop: true,
 					}}
 				/>
+
+				<CreatedByMe>
+					Pedro Henrique de Vasconcellos Almeida<br />&copy; 2021
+				</CreatedByMe>
 			</MainContent>
 		</Container>
 	);
