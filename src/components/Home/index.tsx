@@ -1,34 +1,50 @@
+import GitHubIcon from '../../assets/github.svg';
+import InstagramIcon from '../../assets/instagram.svg';
+import LinkedinIcon from '../../assets/linkedin.svg';
+
 import Typewriter from 'typewriter-effect';
 
-import { Container, CreatedByMe } from './styles';
+import { Container, FloatSocialBar, MainContent, CreatedByMe } from './styles';
 
 export function Home() {
+	function redirectClickTo(url: string) {
+		window.open(url);
+	}
+
 	return (
 		<Container>
-			<Typewriter
-				options={{
-					strings: [ 'working...', 'soon...' ],
-					autoStart: true,
-					loop: true,
-					deleteSpeed: 300,
-				}}
-			/>
+			<FloatSocialBar>
+				<img
+					src={GitHubIcon}
+					alt="GitHub Icon"
+					onClick={() => redirectClickTo('https://github.com/pedrovasalmeida')}
+				/>
+				<img
+					src={InstagramIcon}
+					alt="Instagram Icon"
+					onClick={() => redirectClickTo('https://www.instagram.com/pedroohva/')}
+				/>
+				<img
+					src={LinkedinIcon}
+					alt="Linkedin Icon"
+					onClick={() => redirectClickTo('https://linkedin.com/in/pedrovasalmeida')}
+				/>
+				<div />
+			</FloatSocialBar>
 
-			<CreatedByMe>
-				Pedro Henrique de Vasconcellos Almeida
-				<p>
-					&copy;
-					<Typewriter
-						options={{
-							strings: [ ' 2021' ],
-							autoStart: true,
-							loop: true,
-							delay: 200,
-							deleteSpeed: 400,
-						}}
-					/>
-				</p>
-			</CreatedByMe>
+			<MainContent>
+				<Typewriter
+					options={{
+						strings: [ 'working...', 'soon...' ],
+						autoStart: true,
+						loop: true,
+					}}
+				/>
+
+				<CreatedByMe>
+					Pedro Henrique de Vasconcellos Almeida<br />&copy; 2021
+				</CreatedByMe>
+			</MainContent>
 		</Container>
 	);
 }
