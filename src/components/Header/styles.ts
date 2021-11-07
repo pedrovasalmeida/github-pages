@@ -17,7 +17,7 @@ interface MenuBurguerProps {
 	isHovered: boolean;
 }
 
-export const MenuBurguer = styled.div`
+export const MenuBurguer = styled.div<MenuBurguerProps>`
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -71,17 +71,35 @@ export const HoverFloatMenu = styled.ul<MenuBurguerProps>`
 		transform: translateY(${props => props.isHovered ? '40px' : '0'});
 		box-shadow: 0 40px 64px 8px rgba(31, 38, 135, 0.7);
 
-		border-radius: ${props => props.isHovered ? '1rem' : '50%'};
+		border-radius: ${props => props.isHovered ? '1.5rem' : '50%'};
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 
-		pointer-events: ${props => props.isHovered ? 'visible' : 'none'};
+		pointer-events: ${props => props.isHovered ? 'all' : 'none'};
 		transition: all 600ms 100ms ease;
 		z-index: 2;
+		overflow: hidden;
+
+		& > p {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 180px;
+			margin: auto auto 0;
+			text-align: center;
+			font-size: 14px;
+			padding: 4px 0;
+			font-weight: bold;
+			border-bottom: 2px solid ${props => props.theme.colors.black};
+		}
 
 		& > li {
 			font-weight: 500;
 			cursor: pointer;
+
+			&:not(:first-child) {
+				padding-top: .5rem;
+			}
 
 			&#see-more {
 				text-align: center;
