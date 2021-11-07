@@ -1,16 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const Container = styled.div`
-	display: flex;
-	width: 100%;
-	height: 100vh;
-
-	position: relative;
-
-	overflow: hidden;
+const pulse = keyframes`
+	0%{
+		box-shadow: 0 8px 42px 4px rgba(31, 38, 135, 0.4);
+	}
+	50%{
+		box-shadow: 0 8px 42px 8px rgba(31, 38, 135, 1);
+	}
+	100%{
+		box-shadow: 0 8px 42px 4px rgba(31, 38, 135, 0.4);
+	}
 `;
 
-export const FloatSocialBar = styled.div`
+export const Container = styled.div`
 	display: flex;
 	align-items: center;
 
@@ -33,6 +35,7 @@ export const FloatSocialBar = styled.div`
 	border-bottom: 0;
 	border-top-left-radius: 999px;
 
+	animation: ${pulse} 5s infinite linear;
 	transition: all 600ms ease;
 
 	&:hover {
@@ -54,10 +57,10 @@ export const FloatSocialBar = styled.div`
 	}
 
 	& > img {
-		width: 1.125rem;
-		height: 1.125rem;
+		width: 1.25rem;
+		height: 1.25rem;
 		margin-left: 2.75rem;
-		opacity: 0.6;
+		opacity: 1;
 		filter: contrast(0);
 		cursor: pointer;
 
@@ -67,35 +70,8 @@ export const FloatSocialBar = styled.div`
 			transform: translateY(-2px);
 		}
 
-		&:hover:not(:first-child) {
+		&:hover {
 			filter: contrast(2);
 		}
-	}
-`;
-
-export const MainContent = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	max-width: 1140px;
-	margin: 0 auto;
-
-	background: rgba(8, 8, 16, 0.65);
-
-	width: 100%;
-	height: 100%;
-`;
-
-export const CreatedByMe = styled.span`
-	font-size: .5rem;
-	position: absolute;
-	bottom: 4rem;
-	opacity: .4;
-	text-align: center;
-
-	@media (min-width: 1100px) {
-		bottom: 1rem;
 	}
 `;
