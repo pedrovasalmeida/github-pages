@@ -10,7 +10,7 @@ export const particleOptions = {
       },
       onHover: {
         enable: true,
-        mode: 'attract',
+        mode: 'slow',
         parallax: {
           force: 60,
         },
