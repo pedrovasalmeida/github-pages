@@ -5,7 +5,7 @@ import { particleOptions } from './particleOptions';
 import { Container, CreatedByMe } from './styles';
 
 export function Home() {
-	document.title = 'Pedro H. | Home';
+	document.title = 'Pedro Henrique';
 
 	const particlesInit = (main: any) => {};
 
