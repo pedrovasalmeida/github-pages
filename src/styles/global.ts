@@ -39,7 +39,7 @@ export default createGlobalStyle`
     max-width: 100vw;
     min-height: 100vh;
 
-    animation: ${animatedBackground} 16s ease infinite;
+    animation: ${animatedBackground} 11s ease infinite;
   }
 
   button {
